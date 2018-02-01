@@ -209,7 +209,7 @@ Invalid_argument exception for instance.
 
 let rec max_list (lst : int list) : int =
   match lst with
-  | [] -> raise {Invalid_argument "empty"}
+  | [] -> raise (Invalid_argument "empty")
   | v::[] -> v
   | h::t -> if h > max_list t then h else max_list t ;;
 
